@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacked Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+      }
+      .center {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .stack-area {
+        width: 100%;
+        height: 300vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .right,
+      .left {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        box-sizing: border-box;
+        flex-basis: 50%;
+      }
+      .cards {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .card {
+        width: 350px;
+        height: 350px;
+        box-sizing: border-box;
+        padding: 35px;
+        border-radius: 6mm;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: 0.5s ease-in-out;
+      }
+      .card:nth-child(1) {
+        background: rgb(64, 122, 255);
+        z-index: 6;
+      }
+      .card:nth-child(2) {
+        background: rgb(221, 62, 88);
+        z-index: 5;
+      }
+      .card:nth-child(3) {
+        background: rgb(186, 113, 245);
+        z-index: 4;
+      }
+      .card:nth-child(4) {
+        background: rgb(247, 92, 208);
+        z-index: 3;
+      }
+      .card:nth-child(5) {
+        background: rgb(225, 179, 15);
+        z-index: 2;
+      }
+      .card:nth-child(6) {
+        background: rgb(3, 189, 59);
+        z-index: 1;
+      }
+
+      .sub {
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .content {
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .card.active {
+        transform-origin: bottom left;
+      }
+      .left {
+        align-items: center;
+        flex-direction: column;
+      }
+      .title {
+        width: 420px;
+        font-size: 84px;
+        font-family: poppins;
+        font-weight: 700;
+        line-height: 88px;
+      }
+      .sub-title {
+        width: 420px;
+        font-family: poppins;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+      .sub-title button {
+        font-family: poppins;
+        font-size: 14px;
+        padding: 15px 30px;
+        background: black;
+        color: white;
+        border-radius: 8mm;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      .img{
+        height:300px;
+        width:300px;
+        display:inline-block;
+
+      }
+
+      /*CSS Code for responsiveness*/
+      @media screen and (max-width: 800px) {
+        .left {
+          position: relative;
+          width: 100vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="top">
+        <h1 style="text-align: center;font-size: 84px; font-family:poppins ;">Milky way</h1>>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.mpsYeblB8NV3_5T92vOA4QHaFP&pid=Api&P=0&h=180" style="margin-right: 10px; border-radius: 15%;" class="img">
+        <div style="height:300px;width:1000px;display:inline-block; font-size:25px;margin-left:5px;"><p>The Milky Way is a barred spiral galaxy, one of hundreds of billions in the observable universe. It's also our home.
+
+          Like other galaxies, the Milky Way is an isolated collection of stars and other material bound together by their common gravity. In addition to the 100 billion to 400 billion stars in our galaxy, a similar number of planets likely exist in the Milky Way — some of them part of solar systems and some floating freely. Between the stars sit innumerable nebulas, which are clouds of gas and dust. The vast majority of the interstellar gas is hydrogen and helium.
+          
+          However, multiple lines of evidence — most importantly, that material in the galaxy orbits the center far too quickly to be held together by the gravity of visible objects — suggest that most of the mass of the Milky Way is made up of some form of matter that does not interact with light. Astronomers call this dark matter, and its true nature is not fully understood.</p>
+        </div>
+      
+        </div>
+      <div class="stack-area">
+        <div class="left">
+          <div class="title">Snippets about our Galaxy</div>
+          <div class="sub-title">
+
+            
+            <br />
+           
+          </div>
+        </div>
+        <div class="right">
+          <div class="cards">
+            <div class="card">
+              <div class="sub">clusters</div>
+              <div class="content">In India, the galaxy has been referred to as Aakash Ganga. This literally means “Ganga of the heavens.”</div>
+            </div>
+            <div class="card">
+              <div class="sub">Formation</div>
+              <div class="content">Many of the galaxies in the universe were formed through collisions of raw matter with other already existing galaxies.</div>
+            </div>
+            <div class="card">
+              <div class="sub">Neighbours</div>
+              <div class="content">The Milky Way galaxy is currently growing in size, thanks to its strong gravitational pull, which attracts matter from two neighboring galaxies.</div>
+            </div>
+            <div class="card">
+              <div class="sub">collision</div>
+              <div class="content">Scientists predict that in approximately seven billion years, the Andromeda and Milky Way galaxies will fuse to form one super galaxy that will be the largest galaxy by far in this part of the universe.</div>
+            </div>
+            <div class="card">
+              <div class="sub">galactic bulge</div>
+              <div class="content">A "galactic bulge" occurs when a lot of stars end up gathered together in a very compact space at the center of a galaxy.</div>
+            </div>
+            <div class="card">
+              <div class="sub">Andromeda Galaxy</div>
+              <div class="content">The Andromeda galaxy is the biggest and brightest of the galaxies in Earth's region of the universe.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <script>
+      let cards = document.querySelectorAll(".card");
+      let stackArea = document.querySelector(".stack-area");
+
+      function rotateCards() {
+        let angle = 0;
+        cards.forEach((card) => {
+          if (card.classList.contains("active")) {
+            card.style.transform = `translate(-50%, -120vh) rotate(-48deg)`;
+          } else {
+            card.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+            angle = angle - 10;
+          }
+        });
+      }
+
+      rotateCards();
+
+      window.addEventListener("scroll", () => {
+        let proportion =
+          stackArea.getBoundingClientRect().top / window.innerHeight;
+        if (proportion <= 0) {
+          let n = cards.length;
+          let index = Math.ceil((proportion * n) / 2);
+          index = Math.abs(index) - 1;
+          for (let i = 0; i < n; i++) {
+            if (i <= index) {
+              cards[i].classList.add("active");
+            } else {
+              cards[i].classList.remove("active");
+            }
+          }
+          rotateCards();
+        }
+      });
+
+      //Code for responsiveness
+
+      function adjust() {
+        let windowWidth = window.innerWidth;
+        let left = document.querySelector(".left");
+        left.remove();
+        if (windowWidth < 800) {
+          stackArea.insertAdjacentElement("beforebegin", left);
+        } else {
+          stackArea.insertAdjacentElement("afterbegin", left);
+        }
+      }
+      adjust();
+
+      //detect Resize
+
+      window.addEventListener("resize", adjust);
+    </script>
+  </body>
+</html>
